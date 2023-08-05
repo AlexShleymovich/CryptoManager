@@ -22,9 +22,9 @@ def submit_order(ticker, amount, date, total):
     return id
 
 
-all_orders = []
 crypto_api = CryptoAPI()
 eel.init('web')
 eel.start('index.html', size=(850, 480), port=0)
+
 
 
