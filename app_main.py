@@ -24,7 +24,7 @@ def submit_order(ticker, amount, date, total):
 
 crypto_api = CryptoAPI()
 eel.init('web')
-eel.start('index.html', size=(850, 480), port=0)
+eel.start('login.html', size=(1200, 600), port=0)
 
 
 
