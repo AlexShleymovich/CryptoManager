@@ -20,7 +20,7 @@
         <h1>Crypto Manager</h1>
       </div>
     </div>
-    <form class="login-form" id="form">
+    <form class="login-form" data-role="validator" id="form">
       <div
         class="cell-8 offset-2 bg-white border bd-cyan border-size-3 border-radius-3"
       >
@@ -29,6 +29,7 @@
             id="name"
             type="text"
             data-role="input"
+            data-validate="required"
             data-prepend="<span class='mif-user'>"
             placeholder="Enter your name..."
           />
@@ -38,6 +39,7 @@
             id="api_key"
             type="text"
             data-role="input"
+            data-validate="required"
             data-prepend="<span class='mif-key'>"
             placeholder="API key..."
           />
@@ -47,6 +49,7 @@
             id="secret_key"
             type="password"
             data-role="input"
+            data-validate="required"
             data-prepend="<span class='mif-user-secret'>"
             placeholder="API Secret key..."
           />
@@ -56,7 +59,6 @@
         </div>
       </div>
     </form>
-
     <script src="https://cdn.metroui.org.ua/v4/js/metro.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script>
@@ -65,7 +67,10 @@
         var name = $("#name").val();
         var api_key = $("#api_key").val();
         var api_secret_key = $("#secret_key").val();
-        window.location.href = "dashboard.html";
+        if (name && api_key && api_secret_key) {
+          console.log(name, api_key, api_secret_key);
+          window.location.href = "dashboard.html";
+        }
       });
     </script>
   </body>
