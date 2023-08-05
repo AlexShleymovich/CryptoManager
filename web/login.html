@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Login</title>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.metroui.org.ua/v4/css/metro-all.min.css"
+    />
+    <link rel="stylesheet" href="sign-in.css" />
+    <script type="text/javascript" src="/eel.js"></script>
+  </head>
+  <body>
+    <div class="cell-4 offset-4">
+      <div class="header mt-10">
+        <h1>Crypto Manager</h1>
+      </div>
+    </div>
+    <form class="login-form" id="form">
+      <div
+        class="cell-8 offset-2 bg-white border bd-cyan border-size-3 border-radius-3"
+      >
+        <div class="form-group mt-5">
+          <input
+            type="text"
+            data-role="input"
+            data-prepend="<span class='mif-user'>"
+            placeholder="Enter your name..."
+          />
+        </div>
+        <div class="form-group">
+          <input
+            type="text"
+            data-role="input"
+            data-prepend="<span class='mif-key'>"
+            placeholder="API key..."
+          />
+        </div>
+        <div class="form-group">
+          <input
+            type="password"
+            data-role="input"
+            data-prepend="<span class='mif-user-secret'>"
+            placeholder="API Secret key..."
+          />
+        </div>
+        <div class="cell-4 offset-4 text-center mt-3">
+          <button class="button primary rounded">Submit</button>
+        </div>
+      </div>
+    </form>
+
+    <script src="https://cdn.metroui.org.ua/v4/js/metro.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script>
+      $("#form").submit(function (e) {
+        e.preventDefault();
+        window.location.href = "dashboard.html";
+      });
+    </script>
+  </body>
+</html>
